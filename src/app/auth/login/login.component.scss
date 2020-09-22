@@ -1,0 +1,101 @@
+.login{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    position: absolute;
+    justify-content: center;
+    background: #00b09b; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #00b09b, #96c93d); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #00b09b, #96c93d);
+    &-card{
+        width: 50rem;
+        height: 30rem;
+        background: white;
+        border-radius: 1rem;        
+        box-shadow: 2px 0px 20px 0px rgba(44, 44, 44, 0.356);
+        background-image: url('../../../assets/fondo.jpg');
+        background-size: cover;        
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        &_inputs{
+            width: 20rem;
+            height: 95%;
+            background: white;
+            padding: 1.5% 3.1rem;            
+            border-top-left-radius: 1rem;        
+            border-bottom-left-radius: 1rem;    
+            justify-content: space-around;
+            display: flex;                        
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            h4{                
+                font-size: 2rem;
+                color:  #004b6e;
+            }
+            input{
+                height: 2rem;
+                width: 15rem;
+                border-radius: 2rem;
+                border: 1px solid  #00b09b;
+                text-align: center;
+                outline: none;     
+                margin: -2rem;           
+            }            
+        }
+    }
+}
+
+.button{
+    width: 10rem;
+    height: 2.4rem;
+    background: #00b09b; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #00b09b, #96c93d); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #00b09b, #96c93d);
+    border: 2px solid #00b09b;
+    outline: none;
+    border-radius: 1.3rem;
+    color: white;
+    cursor: pointer;
+    &:hover{
+        background: white;
+        color: #00b09b;
+        border: 2px solid #00b09b;
+        transition-duration: 1s;
+    }
+}
+
+.change{
+    color: #00b09b;
+    margin: 0;
+    cursor: pointer;
+    margin: 1rem 0;
+}
+
+.verify{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 5;
+    background: rgba(130, 43, 211, 0.288);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    &-card{
+        width: 20rem;
+        height: 20rem;
+        background: white;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        text-align: center;
+        img{
+            width: 9rem;
+            height: 9rem;
+        }
+    }
+}   

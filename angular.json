@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "cognito"
+    }
+  },
+  "defaultProject": "cognito",
+  "cli": {
+    "analytics": false
+  }
 }

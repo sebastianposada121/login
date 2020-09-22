@@ -1,0 +1,39 @@
+<div class="login">
+  <div *ngIf="changeForm == true" class="login-card">
+    <form class="login-card_inputs" (ngSubmit)="login()" [formGroup]="loginForm">
+      <h4>Login</h4>
+      <input type="text" placeholder="username" formControlName="username">
+      <input type="password" placeholder="password" formControlName="password">
+      <div>
+        <button class="button" type="submit">Aceptar</button>
+        <div class="change">
+          <p (click)="changeForm = !changeForm">register</p>
+          <p routerLink="/recover">recover password</p>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div *ngIf="changeForm == false" class="login-card">
+    <form (ngSubmit)="register()" [formGroup]="registerForm" class="login-card_inputs">
+      <h4>Register</h4>
+      <input type="text" placeholder="username" formControlName="username">
+      <input type="password" placeholder="password" formControlName="password">
+      <input type="email" placeholder="email" formControlName="email">
+      <div>
+        <button class="button" type="submit">Aceptar</button>
+        <div (click)="changeForm = !changeForm" class="change">
+          <p>login</p>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div *ngIf="error == true" class="verify">
+  <div class="verify-card">
+    <h4>Error</h4>
+    <img src="assets/ui.png">
+    <button class="button" (click)="error = false">Exit</button>
+  </div>
+</div>

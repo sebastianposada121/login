@@ -1,0 +1,23 @@
+<div class="login">
+    <div class="login-card">
+        <form (ngSubmit)="confirmUser()" [formGroup]="confirmUserForm" class="login-card_inputs">
+            <h4>Confirm User</h4>
+            <input type="text" placeholder="username" formControlName="username">
+            <input type="text" placeholder="code" formControlName="confirmationCode">
+            <div>
+                <button class="button" type="submit">Aceptar</button>
+                <div (click)="return()" class="change">
+                    <p>return</p>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div *ngIf="error == true" class="verify">
+    <div class="verify-card">
+      <h4>Error</h4>
+      <img src="assets/ui.png">
+      <button class="button" (click)="error = false">Exit</button>
+    </div>
+  </div>
